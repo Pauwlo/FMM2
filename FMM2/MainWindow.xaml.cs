@@ -596,6 +596,9 @@ namespace FMM2
         {
             InitializeComponent();
 
+            // Hotfix: Allow TLS 1.2 for HTTP requests
+            ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls12;
+
             // add handlers for workers
             workerPopulateMyMods.DoWork += new DoWorkEventHandler(populateMyModsList);
             workerPopulateDLMods.DoWork += new DoWorkEventHandler(populateDLModsList);
