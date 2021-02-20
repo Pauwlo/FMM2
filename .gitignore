@@ -33,7 +33,10 @@ bld/
 [Ll]ogs/
 
 # Visual Studio 2015/2017 cache/options directory
-.vs/
+.vs/*
+# except .vs/FMM2/v15/.suo because it breaks things for some reason
+!.vs/FMM2
+!.vs/FMM2/v15/*.suo
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
